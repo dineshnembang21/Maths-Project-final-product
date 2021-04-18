@@ -6,13 +6,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
-import android.provider.CalendarContract;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
-import android.os.Bundle;
-import java.util.Calendar;
-import mehdi.sakout.aboutpage.AboutPage;
 import java.util.Calendar;
 import mehdi.sakout.aboutpage.AboutPage;
 import mehdi.sakout.aboutpage.Element;
