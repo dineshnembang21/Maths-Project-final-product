@@ -18,11 +18,11 @@ import android.widget.Toast;
 import com.google.android.material.navigation.NavigationView;
 
 public class index_topic extends AppCompatActivity {
-
+    Button  btn_prev;
     ActionBarDrawerToggle toggle;
     DrawerLayout drawerLayout;
 
-    Button btn_algebra,btn_matrix,btn_coordinate,btn_statistics,btn_transformation,btn_trigonometry,btn_vector;
+    Button btn_algebra,btn_matrix,btn_coordinate,btn_statistics,btn_transformation,btn_trigonometry,btn_vector,btn_limit;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -49,6 +49,9 @@ public class index_topic extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.menu_home:
+                        Intent inn=new Intent(index_topic.this,Nex.class);
+                        startActivity(inn);
+
                         Toast.makeText(getApplicationContext(), "Home Panel is Open", Toast.LENGTH_LONG).show();
                         drawerLayout.closeDrawer(GravityCompat.START);
                         break;
@@ -171,6 +174,26 @@ public class index_topic extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent in=new Intent(index_topic.this,vector_pdf.class);
+                startActivity(in);
+            }
+        });
+
+        btn_limit=(Button) findViewById(R.id.button12);
+
+        btn_limit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in=new Intent(index_topic.this,limit_pdf.class);
+                startActivity(in);
+            }
+        });
+
+        btn_prev=(Button) findViewById(R.id.prev2);
+
+        btn_prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in=new Intent(index_topic.this,subject_choice.class);
                 startActivity(in);
             }
         });

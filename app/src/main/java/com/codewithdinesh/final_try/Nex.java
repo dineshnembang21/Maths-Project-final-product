@@ -21,7 +21,7 @@ import com.google.android.material.navigation.NavigationView;
 public class Nex extends AppCompatActivity {
 
 
-    Button btn_sub,btn_sub1;
+    Button btn_sub,btn_sub1,btn_cl11,btn_cl12;
 
         ActionBarDrawerToggle toggle;
         DrawerLayout drawerLayout;
@@ -52,6 +52,9 @@ public class Nex extends AppCompatActivity {
                 public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                     switch (menuItem.getItemId()) {
                         case R.id.menu_home:
+
+                            Intent inn=new Intent(Nex.this,Nex.class);
+                            startActivity(inn);
                             Toast.makeText(getApplicationContext(), "Home Panel is Open", Toast.LENGTH_LONG).show();
                             drawerLayout.closeDrawer(GravityCompat.START);
                             break;
@@ -125,12 +128,36 @@ public class Nex extends AppCompatActivity {
                 btn_sub1.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent in=new Intent(Nex.this,compulsory_maths.class);
+                        Intent in=new Intent(Nex.this,subject_10_choice.class);
 
                         startActivity(in);
 
                     }
                 });
+
+            btn_cl11 = (Button) findViewById(R.id.activity11);
+
+            btn_cl11.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent in=new Intent(Nex.this,compulsory_maths.class);
+
+                    startActivity(in);
+
+                }
+            });
+
+            btn_cl12 = (Button) findViewById(R.id.activity12);
+
+            btn_cl12.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent in=new Intent(Nex.this,compulsory_maths.class);
+
+                    startActivity(in);
+
+                }
+            });
 
 
         }

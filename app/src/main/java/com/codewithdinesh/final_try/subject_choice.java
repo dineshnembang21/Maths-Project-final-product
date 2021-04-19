@@ -48,6 +48,9 @@ public class subject_choice extends AppCompatActivity {
                 public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                     switch (menuItem.getItemId()) {
                         case R.id.menu_home:
+                            Intent inn=new Intent(subject_choice.this,Nex.class);
+                            startActivity(inn);
+
                             Toast.makeText(getApplicationContext(), "Home Panel is Open", Toast.LENGTH_LONG).show();
                             drawerLayout.closeDrawer(GravityCompat.START);
                             break;
@@ -118,6 +121,17 @@ public class subject_choice extends AppCompatActivity {
                     startActivity(in);
                 }
             });
+
+        btn_prev=(Button) findViewById(R.id.prev2);
+
+        btn_prev.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent in=new Intent(subject_choice.this,Nex.class);
+                startActivity(in);
+            }
+        });
+
 
         }
     }
